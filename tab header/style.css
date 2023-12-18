@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+.btn {
+  padding: 10px 20px;
+  background: yellow;
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(./assets/pexels-alexis-ricardo-alaurin-17054028.jpg) no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 120px;
+  justify-content: space-between;
+}
+.navbar img {
+  width: 120px;
+}
+.navbar ul {
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+}
+.navbar ul li {
+  position: relative;
+}
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar ul li:hover:after {
+  transform: scaleX(1);
+}
+.navbar .btn {
+  float: right;
+}
+.container {
+  border: 1px solid #777;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.tab {
+  width: 100%;
+  border: 1px solid #777;
+  padding: 10px;
+}
+.tab button.active {
+  background-color: #ccc;
+  animation: step 1s;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  position: relative;
+  animation: fade 2s;
+}
+.tabcontent span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.tab .tablinks {
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes step {
+  from {
+    color: #000;
+  }
+  to {
+    color: #777;
+  }
+}

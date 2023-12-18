@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+.btn {
+  padding: 10px 20px;
+  background: yellow;
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(./assets/pexels-alexis-ricardo-alaurin-17054028.jpg) no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 120px;
+  justify-content: space-between;
+}
+.navbar img {
+  width: 120px;
+}
+.navbar ul {
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+}
+.navbar ul li {
+  position: relative;
+}
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar ul li:hover:after {
+  transform: scaleX(1);
+}
+.navbar .btn {
+  float: right;
+}
