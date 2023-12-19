@@ -1,0 +1,69 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.tobnav {
+  background-color: #555;
+  overflow: auto;
+  width: 100%;
+}
+.tobnav a {
+  padding: 12px;
+  float: left;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .tobnav a {
+    float: none;
+    display: block;
+  }
+}
+
+.searchmenu {
+  display: flex;
+  gap: 20px;
+}
+.searchmenu .leftside {
+  background: #bbbbbb;
+  width: 25%;
+  height: 100vh;
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px;
+  }
+}
+.leftside {
+  ul {
+    padding: 0;
+  }
+  ul li {
+    padding: 15px;
+    cursor: pointer;
+  }
+}
+.leftside li:hover {
+  background: #555;
+}
+.leftside li:hover a {
+  color: #fff;
+}
+.rightside {
+  margin-top: 20px;
+  input {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
