@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.nav a {
+  display: inline-block;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 17px;
+}
+.nav a:hover,
+.nav a:active {
+  background-color: #ddd;
+  color: black;
+}
+.nav a.icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav a:not(:first-child) {
+    display: none;
+  }
+  .nav a.icon {
+    display: block;
+    float: right;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.main {
+  margin-top: 60px;
+  padding: 10px;
+  font-size: 50px;
+  overflow: scroll;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

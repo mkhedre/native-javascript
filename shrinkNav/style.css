@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f1f1f1;
+  height: 100px;
+  transition: 0.3s;
+  margin-top: 50px;
+}
+.container .logo {
+  display: block;
+  font-size: 30px;
+}
+
+.container a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+}
+.container a:hover {
+  background-color: wheat;
+}
+main {
+  font-size: 80px;
+}

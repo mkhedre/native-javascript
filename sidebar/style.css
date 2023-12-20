@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.sidebar {
+  background: #000;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  padding-top: 60px;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+.list {
+  padding: auto;
+  margin: 0;
+}
+.list li {
+  padding: 15px;
+  a {
+    padding: 5px;
+  }
+  a:hover {
+    color: #fff;
+  }
+}
+.list .closebtn {
+  float: right;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.main {
+  padding: 10px;
+  transition: 0.3s;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

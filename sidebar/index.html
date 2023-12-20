@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- its informs the browser that the decoument is encoded in utf-8
+    character encoding for handling various characters and symbols in different languages.
+    -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>navbar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar" id="side">
+        <ul class="list">
+          <a href="javascript:void(0)" class="closebtn" onclick="hide()"
+            >&times;</a
+          >
+          <li><a href="#">About</a></li>
+          <li><a href="#">services</a></li>
+          <li><a href="#">clients</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <main id="main" class="main">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam et iste
+        perferendis ad sequi aperiam, distinctio at ratione eveniet libero porro
+        explicabo, aspernatur iure ipsa dicta sed. Provident, repellat sint.
+
+        <button onclick="show()">show</button>
+        <button onclick="hide()">hide</button>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
