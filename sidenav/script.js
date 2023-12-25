@@ -1,31 +1,39 @@
-// let tabs = document.getElementsByClassName('tab');
+let form = document.getElementById('myform');
 
-// for (let i = 0; i < tabs.length; i++) {
-//   tabs[i].addEventListener('click', function () {
-//     this.classList.toggle('active');
-//   });
-// }
-// document.getElementById('defaultOpen').click();
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
 
-// function openCity(e, name, color) {
-//   let tabLinks, tabContent, i;
-//   tabContent = document.getElementsByClassName('tabcontent');
-//   tabLinks = document.getElementsByClassName('tablinks');
-//   // hide all tabcontent
-//   for (i = 0; i < tabContent.length; i++) {
-//     tabContent[i].style.display = 'none';
-//   }
-//   // get all button and remove active from them
-//   for (i = 0; i < tabLinks.length; i++) {
-//     tabLinks[i].className = tabLinks[i].className.replace(' active', '');
-//     tabLinks[i].style.backgroundColor = '';
-//   }
-//   //show current tab
-//   document.getElementById(name).style.display = 'block';
-//   document.getElementById(name).style.background = color;
-//   e.currentTarget.className += ' active';
-//   e.currentTarget.style.background = color;
-// }
+  // Create an empty object to store form data
+  const formData = {};
+
+  // Iterate through the form elements and collect values
+  const elements = form.elements;
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    if (element.type !== 'submit') {
+      console.log(element.value);
+      formData[element.name] = element.value;
+    }
+  }
+  console.log(JSON.stringify(formData));
+  // Do something with the formData object
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the response data from the fake API
+      console.log('Fake API response:', data);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during the fetch
+      console.error('Fetch error:', error);
+    });
+});
 
 function toggle() {
   let nav = document.getElementById('nav');

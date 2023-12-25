@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>css</title>
+  </head>
+  <body>
+    <div class="container" id="sContainer">
+      <div class="slides fade">
+        <div class="numtext">1 / 3</div>
+        <img
+          src="./assets/yxc3TeCSsxM3LW6.jpg"
+          alt="1"
+          width="100%"
+          height="500px"
+        />
+        <div class="text">caption text 1</div>
+      </div>
+      <div class="slides fade">
+        <div class="numtext">2 / 3</div>
+        <img
+          src="./assets/392795738_2720549991426099_7369499728114762035_n.jpg"
+          alt="2"
+          width="100%"
+          height="500px"
+        />
+        <div class="text">caption text 2</div>
+      </div>
+      <div class="slides fade">
+        <div class="numtext">3 / 3</div>
+        <img src="./assets/Untitled.png" width="100%" height="500px" alt="3" />
+        <div class="text">caption text 3</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <br />
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
